@@ -1,13 +1,21 @@
 <app-layout>
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <form [formGroup]="form" class="d-flex flex-column align-items-center">
+        <div class="col-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" formControlName="email">
         </div>
-        <div class="mb-3">
-            <label for="exampleInputName1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleInputName1">
+        <div class="col-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="col-3">
+            <label class="form-label">Role</label>
+            <input type="text" class="form-control" formControlName="role">
+        </div>
+        <div class="col-3">
+            <button class="col-6 btn btn-success" (click)="saveUser()">Submit</button>
+            <button class="col-6 btn btn-danger" (click)="cancel()">Cancel</button>
+        </div>
     </form>
 </app-layout>

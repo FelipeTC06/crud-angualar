@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     { path: 'list', component: CrudListComponent },
     { path: 'form', component: CrudFormComponent },
+    { path: 'form/:id', component: CrudFormComponent },
     { path: '', component: HomeComponent },
 ];
 

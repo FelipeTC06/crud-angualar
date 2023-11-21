@@ -1,3 +1,15 @@
 <app-layout>
-    <p>crud-list works!</p>
+    <div class="d-flex">
+        <div *ngFor="let user of users" class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ user.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{ user.email }}</h6>
+                <p class="card-text">{{ user.role }}</p>
+            </div>
+            <div>
+                <i class="bi bi-pen-fill" (click)="editUser(user.id)"></i>
+                <i class="bi bi-trash" (click)="deleteUser(user.id)"></i>
+            </div>
+        </div>
+    </div>
 </app-layout>
