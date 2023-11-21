@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,12 +10,11 @@ import { CrudFormComponent } from './crud-exemple/crud-form/crud-form.component'
 @NgModule({
   declarations: [
     AppComponent,
-    CrudListComponent,
-    CrudFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
